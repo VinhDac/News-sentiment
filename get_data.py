@@ -1,7 +1,7 @@
 """Download the data: Financial PhraseBank (Malo, Sinha et al., 2014).
 
 About 4,800 sentences from financial news, each labelled positive, negative or
-neutral — for an investor, is this good or bad news for the share price? —
+neutral - for an investor, is this good or bad news for the share price? -
 by 5 to 8 annotators with a finance background. Licence CC BY-NC-SA 3.0
 (non-commercial), from the Hugging Face copy of the original release. Checked
 against a known SHA-256.
@@ -26,7 +26,7 @@ def main() -> None:
         urllib.request.urlretrieve(URL, archive)
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
     if digest != SHA256:
-        raise SystemExit(f"checksum mismatch — got {digest}")
+        raise SystemExit(f"checksum mismatch - got {digest}")
     with zipfile.ZipFile(archive) as z:
         z.extractall(RAW, members=[m for m in z.namelist() if not m.startswith("__MACOSX")])
     print(f"ok  {RAW / 'FinancialPhraseBank-v1.0'}")

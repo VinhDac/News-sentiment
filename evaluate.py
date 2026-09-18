@@ -32,10 +32,10 @@ TARGET = 0.95          # accuracy wanted from the sentences the model labels on 
 
 
 def aligned(ids: list[str], probs: list, part: pd.DataFrame) -> np.ndarray:
-    """Saved probabilities in the split's row order — refusing to guess if
+    """Saved probabilities in the split's row order - refusing to guess if
     the saved results were made on a different split."""
     if sorted(ids) != sorted(part["id"]):
-        raise SystemExit("saved results were made on a different split — re-run training")
+        raise SystemExit("saved results were made on a different split - re-run training")
     return pd.DataFrame(probs, index=ids).loc[part["id"]].to_numpy()
 
 

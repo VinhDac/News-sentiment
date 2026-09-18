@@ -2,7 +2,7 @@
 
   majority   always answer the most common label in training ("neutral")
   tf-idf     word and word-pair counts, weighted by rarity, into a logistic
-             regression — the classic text classifier
+             regression - the classic text classifier
 
 The regression's strength (C) and whether to re-weight the rare classes are
 chosen on the VALIDATION set; the test set is scored once, by the chosen

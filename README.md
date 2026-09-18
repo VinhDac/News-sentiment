@@ -12,8 +12,8 @@ of the sentences, and only just over half on 13%.
 
 **Cleaning, so the test is a real test.** Six repeated copies were removed. Two
 sentences whose copies carried different labels were dropped. Sentences that
-differ only in their numbers ("Operating profit rose to EUR 9.4 mn…" and
-"…EUR 11.7 mn…") were kept on the same side of the split; a plain random split
+differ only in their numbers ("Operating profit rose to EUR 9.4 mn..." and
+"...EUR 11.7 mn...") were kept on the same side of the split; a plain random split
 would have put the twins of 6 test sentences in training. That leaves 4,836
 sentences: 3,387 for training, 724 for validation and 725 for test. Each part
 has the same mix of labels: 59% neutral, 28% positive, 12.5% negative.

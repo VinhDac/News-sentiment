@@ -23,7 +23,7 @@ ok = fail = 0
 def check(name, cond, detail=""):
     global ok, fail
     ok, fail = (ok + 1, fail) if cond else (ok, fail + 1)
-    print(f"  {'ok  ' if cond else 'FAIL'} {name}{'' if cond else ' — ' + detail}")
+    print(f"  {'ok  ' if cond else 'FAIL'} {name}{'' if cond else ' - ' + detail}")
 
 
 print("\n[the raw files]")
@@ -54,7 +54,7 @@ for level, share in data.LEVELS.items():
     check(f"agreement marked {share:.0%} or more exactly for the sentences in {level}",
           ((df["agreement"] >= share) == inside).all())
 
-print("\n[the split — no sentence, nor a copy with other numbers, on two sides]")
+print("\n[the split - no sentence, nor a copy with other numbers, on two sides]")
 train, val, test = data.split(df)
 sides = {"train": train, "validation": val, "test": test}
 check("the three parts hold every sentence exactly once",
@@ -211,7 +211,7 @@ if (HERE / "models" / "distilbert").exists():
     for (text, want), r in zip(cases, predict.classify([c[0] for c in cases], *predict.load())):
         check(f"{want}: {text}", r["distilbert"] == want, f"said {r['distilbert']}")
 else:
-    print("  (no saved model — run finetune.py first)")
+    print("  (no saved model - run finetune.py first)")
 
 print(f"\n{ok} ok, {fail} fail")
 raise SystemExit(1 if fail else 0)
