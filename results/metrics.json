@@ -1,0 +1,261 @@
+{
+ "data": {
+  "lines": 4846,
+  "exact_duplicates_removed": 6,
+  "conflicting_sentences_dropped": 2,
+  "conflicting_rows_dropped": 4,
+  "sentences": 4836,
+  "templates": 4806,
+  "train": 3387,
+  "validation": 724,
+  "test": 725,
+  "test_all_agree": 334,
+  "label_share": {
+   "neutral": 0.5937,
+   "positive": 0.2814,
+   "negative": 0.1249
+  }
+ },
+ "test_fingerprint": "07838dbe3a1d8025",
+ "majority": {
+  "accuracy": 0.593103448275862,
+  "macro_f1": 0.2481962481962482,
+  "f1_negative": 0.0,
+  "f1_neutral": 0.7445887445887446,
+  "f1_positive": 0.0,
+  "accuracy_agree_50": 0.5806451612903226,
+  "accuracy_agree_66": 0.41818181818181815,
+  "accuracy_agree_75": 0.5957446808510638,
+  "accuracy_agree_100": 0.6526946107784432
+ },
+ "tfidf_lr": {
+  "accuracy": 0.7627586206896552,
+  "macro_f1": 0.7106782427121635,
+  "f1_negative": 0.6363636363636364,
+  "f1_neutral": 0.827354260089686,
+  "f1_positive": 0.6683168316831684,
+  "accuracy_agree_50": 0.5591397849462365,
+  "accuracy_agree_66": 0.6090909090909091,
+  "accuracy_agree_75": 0.7340425531914894,
+  "accuracy_agree_100": 0.8862275449101796,
+  "chosen": {
+   "C": 30,
+   "class_weight": "balanced",
+   "val_macro_f1": 0.7212
+  }
+ },
+ "distilbert": {
+  "mean": {
+   "accuracy": 0.864367816091954,
+   "macro_f1": 0.8526411547188307,
+   "f1_negative": 0.8624489630683461,
+   "f1_neutral": 0.8970601843685717,
+   "f1_positive": 0.7984143167195743,
+   "accuracy_agree_50": 0.5483870967741935,
+   "accuracy_agree_66": 0.7636363636363637,
+   "accuracy_agree_75": 0.8776595744680851,
+   "accuracy_agree_100": 0.9780439121756487
+  },
+  "std": {
+   "accuracy": 0.0034711882461015025,
+   "macro_f1": 0.004480153467732522,
+   "f1_negative": 0.00788400709918076,
+   "f1_neutral": 0.002072240773813095,
+   "f1_positive": 0.005261757459057618,
+   "accuracy_agree_50": 0.018624202231923393,
+   "accuracy_agree_66": 0.009090909090909094,
+   "accuracy_agree_75": 0.00921303621047275,
+   "accuracy_agree_100": 0.0045734288372812895
+  },
+  "per_seed": {
+   "0": {
+    "accuracy": 0.8606896551724138,
+    "macro_f1": 0.8486605597433184,
+    "f1_negative": 0.8586956521739131,
+    "f1_neutral": 0.8949232585596222,
+    "f1_positive": 0.7923627684964201,
+    "accuracy_agree_50": 0.5591397849462365,
+    "accuracy_agree_66": 0.7545454545454545,
+    "accuracy_agree_75": 0.8723404255319149,
+    "accuracy_agree_100": 0.9730538922155688
+   },
+   "1": {
+    "accuracy": 0.8675862068965517,
+    "macro_f1": 0.8574929068760042,
+    "f1_negative": 0.8715083798882681,
+    "f1_neutral": 0.8990610328638498,
+    "f1_positive": 0.801909307875895,
+    "accuracy_agree_50": 0.5591397849462365,
+    "accuracy_agree_66": 0.7727272727272727,
+    "accuracy_agree_75": 0.8723404255319149,
+    "accuracy_agree_100": 0.9820359281437125
+   },
+   "2": {
+    "accuracy": 0.8648275862068966,
+    "macro_f1": 0.8517699975371693,
+    "f1_negative": 0.8571428571428571,
+    "f1_neutral": 0.897196261682243,
+    "f1_positive": 0.8009708737864077,
+    "accuracy_agree_50": 0.5268817204301075,
+    "accuracy_agree_66": 0.7636363636363637,
+    "accuracy_agree_75": 0.8882978723404256,
+    "accuracy_agree_100": 0.9790419161676647
+   }
+  },
+  "learning_rates_val_macro_f1": {
+   "2e-05": 0.843,
+   "3e-05": 0.8482,
+   "5e-05": 0.8408
+  },
+  "chosen_lr": 3e-05,
+  "best_epochs": {
+   "0": 3,
+   "1": 4,
+   "2": 4
+  },
+  "train_minutes": {
+   "0": 5.2,
+   "1": 5.2,
+   "2": 5.1
+  },
+  "saved_seed": 2,
+  "errors_where_annotators_split": {
+   "mean_share": 0.9256541725601132,
+   "per_seed": {
+    "0": 0.9108910891089109,
+    "1": 0.9375,
+    "2": 0.9285714285714286
+   },
+   "test_share_of_split_sentences": 0.5393103448275862
+  }
+ },
+ "selective": {
+  "target": 0.95,
+  "distilbert": {
+   "threshold": 0.9898,
+   "val_coverage": 0.6823204419889503,
+   "val_accuracy": 0.951417004048583,
+   "test_coverage": 0.6744827586206896,
+   "test_accuracy": 0.9447852760736196,
+   "test_accuracy_rest": 0.6991525423728814
+  },
+  "tfidf_lr": {
+   "threshold": 0.9242,
+   "val_coverage": 0.3383977900552486,
+   "val_accuracy": 0.9510204081632653,
+   "test_coverage": 0.3544827586206897,
+   "test_accuracy": 0.9182879377431906,
+   "test_accuracy_rest": 0.6773504273504274
+  }
+ },
+ "speed": {
+  "tfidf_lr_microseconds_per_sentence_cpu": 21.5,
+  "tfidf_lr_mb": 2.2,
+  "distilbert_mb": 268.5,
+  "distilbert_sentences_per_second_mps": 293,
+  "distilbert_sentences_per_second_cpu": 208
+ },
+ "errors": [
+  {
+   "text": "Etteplan targets to employ at least 20 people in Borl+ñnge .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.998,
+   "agreement": 0.66
+  },
+  {
+   "text": "Both loans will be used to finance strategic investments such as shopping center redevelopment projects and refinancing of maturing debt .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.997,
+   "agreement": 0.5
+  },
+  {
+   "text": "The iTunes-based material will be accessible on Windows-based or Macintosh computers and transferable to portable devices , including Apple 's iPods .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.997,
+   "agreement": 0.5
+  },
+  {
+   "text": "The terms of the financing were approved by the Annual General Meeting of the Company held on June 30 , 2010 .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.997,
+   "agreement": 0.5
+  },
+  {
+   "text": "The 50-50 joint venture , to be called Nokia Siemens Networks , will be comprised of Nokia 's network business group and Siemens ' carrier-related operations , creating estimated synergies of 1.5 billion euros ( $ 1.9 billion ) by 2010 , Nokia said .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.997,
+   "agreement": 0.75
+  },
+  {
+   "text": "The terms of the aforementioned funding are considerably below the Bank 's current CDS levels in the market and have a maturity ranging from 1 to 7.5 years .",
+   "label": "negative",
+   "predicted": "neutral",
+   "confidence": 0.996,
+   "agreement": 0.5
+  },
+  {
+   "text": "The subdivision made sales revenues last year of EUR 480.7 million EUR 414.9 million in 2008 , and operating profits of EUR 44.5 million EUR 7.4 million .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.996,
+   "agreement": 0.66
+  },
+  {
+   "text": "Its main business area , the Glass Machinery Group of Glaston Technologies , is the global market leader in glass processing machines .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.996,
+   "agreement": 0.66
+  },
+  {
+   "text": "The circuit 's overall production rate on a weekly basis is now in excess of an average of 40,000 tonnes per day , with volumes in excess of 50,000 tonnes per day being reached on individual days .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.996,
+   "agreement": 0.5
+  },
+  {
+   "text": "Nokia Corp of Finland Tuesday said it has received a unified device managment contract with Finnish operator Elisa Oyj .",
+   "label": "neutral",
+   "predicted": "positive",
+   "confidence": 0.995,
+   "agreement": 0.5
+  },
+  {
+   "text": "India is high on our priority since business links between our two countries is also expanding , '' Tornstrom said .",
+   "label": "neutral",
+   "predicted": "positive",
+   "confidence": 0.995,
+   "agreement": 0.5
+  },
+  {
+   "text": "This bold spinning 360 red fabric design is set beautifully on Ercols Napoli sofa .",
+   "label": "positive",
+   "predicted": "neutral",
+   "confidence": 0.995,
+   "agreement": 0.5
+  }
+ ],
+ "confusion": [
+  [
+   78,
+   8,
+   5
+  ],
+  [
+   8,
+   384,
+   38
+  ],
+  [
+   5,
+   34,
+   165
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+data/raw/
+models/
+*.duckdb
+*.duckdb.wal
+dashboard/index.html
+*.dylib
+*.so
+bench_parts
+tsan_check
+*.dSYM/
+__pycache__/
+*.pyc
+.DS_Store
